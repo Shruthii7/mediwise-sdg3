@@ -3,13 +3,13 @@ export default function Hero() {
     <section className="min-h-[calc(100vh-64px)] bg-black flex items-center">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
 
           {/* LEFT SIDE */}
 
           <div>
 
-            <h1 className="text-white text-5xl md:text-6xl font-bold leading-tight">
+            <h1 className="text-white text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
               Understand Your Medicines Better
             </h1>
 
@@ -36,7 +36,7 @@ export default function Hero() {
 
           <div className="flex justify-center">
 
-            <div className="bg-white rounded-2xl shadow-xl p-8 w-full max-w-md">
+            <div className="bg-white rounded-2xl shadow-xl p-8 w-full max-w-lg">
 
               <h3 className="text-xl font-bold text-blue-600">
                 💊 Medicine of the Day
