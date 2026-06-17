@@ -45,7 +45,7 @@ export default function FeaturedMedicines() {
                 {medicine.name}
               </h3>
 
-              <p className="text-2xl font-bold mt-4 text-gray-900">
+              <p className="text-2xl font-bold mt-4 text-gray-600">
                 {medicine.use}
               </p>
 

@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import FeaturedMedicines from "@/components/FeaturedMedicines";
+import Categories from "@/components/Categories";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <FeaturedMedicines />
+      <Categories />
     </>
   );
 }
