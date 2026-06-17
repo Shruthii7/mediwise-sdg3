@@ -44,9 +44,9 @@ export default function Hero() {
 
               <div className="mt-6">
 
-                <h2 className="text-3xl font-bold">
-                  Paracetamol
-                </h2>
+                <h3 className="text-5xl font-bold text-gray-900">
+  Paracetamol
+</h3>
 
                 <p className="mt-3 text-gray-600">
                   Commonly used to reduce fever and relieve mild to moderate pain.
@@ -54,15 +54,15 @@ export default function Hero() {
 
                 <div className="mt-6 space-y-3">
 
-                  <div className="bg-blue-50 p-3 rounded-lg">
+                  <div className="bg-blue-100 text-blue-900">
                     ✓ Pain Relief
                   </div>
 
-                  <div className="bg-blue-50 p-3 rounded-lg">
+                  <div className="bg-blue-100 text-blue-900">
                     ✓ Fever Reduction
                   </div>
 
-                  <div className="bg-blue-50 p-3 rounded-lg">
+                  <div className="bg-blue-100 text-blue-900">
                     ✓ Over-the-Counter Medicine
                   </div>
 

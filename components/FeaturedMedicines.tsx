@@ -22,11 +22,11 @@ export default function FeaturedMedicines() {
     <section className="py-20 bg-gray-100">
       <div className="max-w-7xl mx-auto px-4">
 
-        <h2 className="text-4xl font-bold text-center">
-          Popular Medicines
+        <h2 className="text-4xl font-bold text-center text-gray-900">
+          Featured Medicines
         </h2>
 
-        <p className="text-center text-gray-600 mt-4">
+        <p className="text-center font-bold text-gray-600 mt-4">
           Explore commonly used medicines and their purposes.
         </p>
 
@@ -35,17 +35,17 @@ export default function FeaturedMedicines() {
           {medicines.map((medicine) => (
             <div
               key={medicine.name}
-              className="bg-white rounded-xl shadow p-6"
+              className="bg-white rounded-2xl shadow-lg p-6 hover:-translate-y-2 hover:shadow-xl transition-all duration-300"
             >
-              <div className="text-4xl">
+              <div className="text-2xl font-bold mt-4 text-gray-900">
                 💊
               </div>
 
-              <h3 className="text-xl font-bold mt-4">
+              <h3 className="text-2xl font-bold mt-4 text-gray-900">
                 {medicine.name}
               </h3>
 
-              <p className="text-gray-600 mt-2">
+              <p className="text-2xl font-bold mt-4 text-gray-900">
                 {medicine.use}
               </p>
 
