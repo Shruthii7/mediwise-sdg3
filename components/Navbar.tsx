@@ -8,7 +8,7 @@ export default function Navbar() {
             MediWise
           </div>
 
-          <div className="hidden md:flex gap-8 font-medium">
+          <div className="hidden md:flex gap-8 font-medium text-gray-700">
             <a href="#">Home</a>
             <a href="#">Medicines</a>
             <a href="#">Interactions</a>
