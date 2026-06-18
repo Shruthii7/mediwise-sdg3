@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import FeaturedMedicines from "@/components/FeaturedMedicines";
 import Categories from "@/components/Categories";
+import DrugInteractions from "@/components/DrugInteractions";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <Hero />
       <FeaturedMedicines />
       <Categories />
+      <DrugInteractions />
     </>
   );
 }
