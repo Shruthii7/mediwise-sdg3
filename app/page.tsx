@@ -4,16 +4,18 @@ import FeaturedMedicines from "@/components/FeaturedMedicines";
 import Categories from "@/components/Categories";
 import DrugInteractions from "@/components/DrugInteractions";
 import HealthTips from "@/components/HealthTips";
+import QuizSection from "@/components/QuizSection";
 
 export default function Home() {
   return (
     <>
-      <Navbar />
-      <Hero />
-      <FeaturedMedicines />
-      <Categories />
-      <DrugInteractions />
-       <HealthTips />
-    </>
+  <Navbar />
+  <Hero />
+  <FeaturedMedicines />
+  <Categories />
+  <DrugInteractions />
+  <HealthTips />
+  <QuizSection />
+</>
   );
 }
