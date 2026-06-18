@@ -6,6 +6,7 @@ import DrugInteractions from "@/components/DrugInteractions";
 import HealthTips from "@/components/HealthTips";
 import QuizSection from "@/components/QuizSection";
 import SDGSection from "@/components/SDGSection";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
   <HealthTips />
   <QuizSection />
   <SDGSection />
+  <Footer />
 </>
   );
 }

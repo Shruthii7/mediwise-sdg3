@@ -19,11 +19,11 @@ export default function QuizSection() {
 
           <div className="mt-8 space-y-4">
 
-            <button className="w-full bg-white p-4 rounded-xl shadow hover:bg-blue-50">
+            <button className="w-full bg-white p-4 rounded-xl text-gray-600 mt-4 shadow hover:bg-blue-50">
               Yes
             </button>
 
-            <button className="w-full bg-white p-4 rounded-xl shadow hover:bg-blue-50">
+            <button className="w-full bg-white p-4 rounded-xl text-gray-600 mt-4 shadow hover:bg-blue-50">
               No
             </button>
 
