@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import FeaturedMedicines from "@/components/FeaturedMedicines";
 import Categories from "@/components/Categories";
 import DrugInteractions from "@/components/DrugInteractions";
+import HealthTips from "@/components/HealthTips";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <FeaturedMedicines />
       <Categories />
       <DrugInteractions />
+       <HealthTips />
     </>
   );
 }
