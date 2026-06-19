@@ -1,3 +1,4 @@
+import Link from "next/link";
 export default function Navbar() {
   return (
     <nav className="sticky top-0 z-50 bg-white border-b">
@@ -9,8 +10,8 @@ export default function Navbar() {
           </div>
 
           <div className="hidden md:flex gap-8 font-medium text-gray-700">
-            <a href="#">Home</a>
-            <a href="#">Medicines</a>
+            <Link href="/">Home</Link>
+            <Link href="/medicines">Medicines</Link>
             <a href="#">Interactions</a>
             <a href="#">Health Tips</a>
             <a href="#">Quiz</a>

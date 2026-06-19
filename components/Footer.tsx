@@ -42,10 +42,11 @@ export default function Footer() {
 
         </div>
 
-        <div className="border-t border-gray-800 mt-8 pt-6 text-center text-gray-500">
-          © 2026 MediWise • Built for SDG 3 Hackathon
-        </div>
-
+<div className="border-t border-gray-800 mt-8 pt-6 text-center text-gray-500">
+  © 2026 MediWise • Built for SDG 3 Hackathon
+  <br />
+  Designed & Developed by Alige Shruthi
+</div>
       </div>
     </footer>
   );

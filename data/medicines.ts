@@ -2,6 +2,7 @@ export const medicines = [
   {
     id: 1,
     name: "Paracetamol",
+    category: "Pain Relief",
     uses: "Pain and fever relief",
     sideEffects: "Nausea, rash",
     precautions: "Avoid overdose",
@@ -9,6 +10,7 @@ export const medicines = [
   {
     id: 2,
     name: "Ibuprofen",
+     category: "Pain Relief",
     uses: "Inflammation and pain relief",
     sideEffects: "Stomach irritation",
     precautions: "Take after food",
@@ -16,6 +18,7 @@ export const medicines = [
   {
     id: 3,
     name: "Cetirizine",
+    category: "Allergy",
     uses: "Allergy relief",
     sideEffects: "Drowsiness",
     precautions: "Avoid driving if sleepy",
@@ -23,6 +26,7 @@ export const medicines = [
   {
     id: 4,
     name: "Vitamin D",
+    category: "Supplements",
     uses: "Bone health",
     sideEffects: "Rare in normal doses",
     precautions: "Follow dosage guidance",
@@ -30,6 +34,7 @@ export const medicines = [
   {
     id: 5,
     name: "Amoxicillin",
+     category: "Antibiotics",
     uses: "Bacterial infections",
     sideEffects: "Diarrhea",
     precautions: "Complete full course",
