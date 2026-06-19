@@ -1,90 +1,72 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { medicines } from "@/data/medicines";
 
+
 export default function MedicinesPage() {
-  const [search, setSearch] = useState("");
-  const [category, setCategory] = useState("All");
+    const [search, setSearch] = useState("");
 
- const filteredMedicines = medicines.filter((medicine) => {
-  const matchesSearch = medicine.name
-    .toLowerCase()
-    .includes(search.toLowerCase());
-
-  const matchesCategory =
-    category === "All" ||
-    medicine.category === category;
-
-  return matchesSearch && matchesCategory;
-});
-
+const filteredMedicines = medicines.filter((medicine) =>
+  medicine.name.toLowerCase().includes(search.toLowerCase())
+);
+    
   return (
-    <main className="min-h-screen bg-gray-100 py-20">
+    <main className="min-h-screen bg-gray-100 py-12">
       <div className="max-w-7xl mx-auto px-6">
-
-        <h1 className="text-5xl font-bold text-center text-gray-900">
-          Medicines Explorer
+<a
+  href="/"
+  className="inline-block mb-6 text-blue-600 font-semibold"
+>
+  ← Back to Home
+</a>
+        <h1 className="text-5xl font-bold text-center mb-4 text-black">
+          Medicines Database
         </h1>
 
-        <p className="text-center text-gray-600 mt-4">
-          Learn about common medicines and their safe usage.
+        <p className="text-center text-2xl text-gray-600 mb-12">
+          Explore commonly used medicines.
         </p>
 
-        <div className="mt-10 flex justify-center">
-          <input
-            type="text"
-            placeholder="Search medicine..."
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-            className="w-full max-w-xl p-4 rounded-xl border border-gray-300 shadow-sm"
-          />
-        </div>
-<div className="flex flex-wrap gap-3 justify-center mt-6">
+        <input
+  type="text"
+  placeholder="Search medicine..."
+  value={search}
+  onChange={(e) => setSearch(e.target.value)}
+  className="mt-6 w-full max-w-md px-4 py-3 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+/>
 
-  {["All", "Pain Relief", "Allergy", "Supplements", "Antibiotics"].map((cat) => (
-    <button
-      key={cat}
-      onClick={() => setCategory(cat)}
-      className={`px-4 py-2 rounded-full transition ${
-        category === cat
-          ? "bg-blue-600 text-white"
-          : "bg-white border border-gray-300 text-gray-700"
-      }`}
-    >
-      {cat}
-    </button>
-  ))}
-
-</div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
           {filteredMedicines.map((medicine) => (
             <div
               key={medicine.id}
-              className="bg-white rounded-2xl p-6 shadow-lg"
+              className="bg-white rounded-2xl shadow-lg p-6"
             >
-              <div className="text-4xl">💊</div>
-
-              <h2 className="text-2xl font-bold mt-4 text-gray-900">
+              <h2 className="text-2xl font-bold text-blue-600">
                 {medicine.name}
               </h2>
 
-              <p className="mt-3">
-                <strong>Uses:</strong> {medicine.uses}
+              <p className="mt-3 text-gray-600">
+                {medicine.uses}
               </p>
 
-              <p className="mt-2">
-                <strong>Side Effects:</strong> {medicine.sideEffects}
-              </p>
-
-              <p className="mt-2">
-                <strong>Precautions:</strong> {medicine.precautions}
-              </p>
+              <a
+                href={`/medicines/${medicine.name.toLowerCase()}`}
+                className="inline-block mt-4 text-blue-600 font-semibold"
+              >
+                View Details →
+              </a>
+              {filteredMedicines.length === 0 && (
+  <p className="text-center text-red-500 mt-8">
+    No medicine found.
+  </p>
+)}
             </div>
           ))}
-        </div>
 
+        </div>
       </div>
     </main>
   );

@@ -11,15 +11,15 @@ import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <>
-  <Navbar />
-  <Hero />
-  <FeaturedMedicines />
-  <Categories />
-  <DrugInteractions />
-  <HealthTips />
-  <QuizSection />
-  <SDGSection />
-  <Footer />
-</>
+      <Navbar />
+      <Hero />
+      <FeaturedMedicines />
+      <Categories />
+      <DrugInteractions />
+      <HealthTips />
+      <QuizSection />
+      <SDGSection />
+      <Footer />
+    </>
   );
 }
