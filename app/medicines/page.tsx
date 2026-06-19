@@ -7,11 +7,17 @@ import { medicines } from "@/data/medicines";
 
 export default function MedicinesPage() {
     const [search, setSearch] = useState("");
+    const [category, setCategory] = useState("All");
 
-const filteredMedicines = medicines.filter((medicine) =>
-  medicine.name.toLowerCase().includes(search.toLowerCase())
-);
-    
+const filteredMedicines = medicines.filter((medicine) => {
+  const matchesSearch =
+    medicine.name.toLowerCase().includes(search.toLowerCase());
+
+  const matchesCategory =
+    category === "All" || medicine.category === category;
+
+  return matchesSearch && matchesCategory;
+});  
   return (
     <main className="min-h-screen bg-gray-100 py-12">
       <div className="max-w-7xl mx-auto px-6">
@@ -29,13 +35,90 @@ const filteredMedicines = medicines.filter((medicine) =>
           Explore commonly used medicines.
         </p>
 
-        <input
-  type="text"
-  placeholder="Search medicine..."
-  value={search}
-  onChange={(e) => setSearch(e.target.value)}
-  className="mt-6 w-full max-w-md px-4 py-3 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-/>
+        <div className="flex justify-center mt-8 mb-10">
+  <input
+    type="text"
+    placeholder="🔍 Search medicines..."
+    value={search}
+    onChange={(e) => setSearch(e.target.value)}
+    className="
+      w-full
+      max-w-xl
+      px-5
+      py-4
+      rounded-xl
+      border-2
+      border-blue-200
+      bg-white
+      text-gray-800
+      text-lg
+      shadow-md
+      focus:outline-none
+      focus:border-blue-500
+      focus:ring-2
+      focus:ring-blue-300
+    "
+  />
+
+  <div className="flex flex-wrap justify-center gap-3 mb-10">
+
+  <button
+    onClick={() => setCategory("All")}
+    className={`px-4 py-2 rounded-lg ${
+      category === "All"
+        ? "bg-blue-600 text-white"
+        : "bg-white border"
+    }`}
+  >
+    All
+  </button>
+
+  <button
+    onClick={() => setCategory("Pain Relief")}
+    className={`px-4 py-2 rounded-lg ${
+      category === "Pain Relief"
+        ? "bg-blue-600 text-white"
+        : "bg-white border"
+    }`}
+  >
+    Pain Relief
+  </button>
+
+  <button
+    onClick={() => setCategory("Allergy")}
+    className={`px-4 py-2 rounded-lg ${
+      category === "Allergy"
+        ? "bg-blue-600 text-white"
+        : "bg-white border"
+    }`}
+  >
+    Allergy
+  </button>
+
+  <button
+    onClick={() => setCategory("Antibiotics")}
+    className={`px-4 py-2 rounded-lg ${
+      category === "Antibiotics"
+        ? "bg-blue-600 text-white"
+        : "bg-white border"
+    }`}
+  >
+    Antibiotics
+  </button>
+
+  <button
+    onClick={() => setCategory("Supplements")}
+    className={`px-4 py-2 rounded-lg ${
+      category === "Supplements"
+        ? "bg-blue-600 text-white"
+        : "bg-white border"
+    }`}
+  >
+    Supplements
+  </button>
+
+</div>
+</div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
